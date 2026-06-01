@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Search Bar</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <div class="search-container">
+        <!-- Search Input Field -->
+        <input type="search" id="search-bar" placeholder="Type to search items..." onkeyup="filterSearch()">
+        
+        <!-- List of Searchable Items -->
+        <ul id="item-list">
+            <li class="searchable-item">Apple</li>
+            <li class="searchable-item">Banana</li>
+            <li class="searchable-item">Cherry</li>
+            <li class="searchable-item">Date</li>
+            <li class="searchable-item">Elderberry</li>
+            <li class="searchable-item">Fig</li>
+            <li class="searchable-item">Grape</li>
+        </ul>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>

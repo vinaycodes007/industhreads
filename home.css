@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font family import links are above */
+
+:root{
+    --primary-color: #FfFFFF;
+    --secondary-color: #000000;
+}
+html{
+overflow-y: scroll;
+    
+  /* This activates snapping along the vertical axis */
+  scroll-snap-type: y ; 
+  scroll-padding-top: 15vh; /* Adjust this value to match the height of your fixed navbar */
+  scroll-behavior: smooth;
+  /* Optional: Makes the glide feel smoother */
+
+}
+html::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+body{
+    min-height: 100vh;
+}
+.section{
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);z-index: 1000;
+
+}
+nav ul li{
+    height:10vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav a{
+    height: 100%;
+    padding:0 10px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+.button{
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: var(--secondary-color); */
+}
+
+.logo{
+position: absolute;
+ left: 50px; 
+}
+
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width:250px;
+    z-index: 1000;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:flex-start;
+}
+.sidebar li{
+    width: 100%;
+} 
+
+.menu{
+    position: absolute;
+    right: 50px;
+} 
+
+/* .navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height:10vh;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}*/
+
+.main{
+    margin: 150px auto;
+    width: 90vw;
+    height: 400px;
+    background-color: var(--secondary-color);
+    
+    border-radius: 10px;
+    color: var(--primary-color);
+}
+
+.new{
+    text-align: center;
+    margin:200px auto;
+    height: 50vh;
+    width: 100vw;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-sizing: border-box;
+    font-size: 30px;
+}
+.grid{
+   
+    /* border:2px solid rgb(255, 0, 0); */
+    margin:  auto;
+    height: 400px;
+    width: 100%;
+    display: grid;
+    justify-content: center;  
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+.item{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.about{
+    margin:50vh auto;
+    height:auto;
+    width: 100%;
+    background-color: var(--primary-color); 
+    DISPLAY: flex;
+    justify-content: center; 
+}
+.grid2{
+    /* border:2px solid rgb(255, 0, 0); */
+    margin:100px  auto;
+    height: 40VH;
+    width: 95vw;
+    display: grid;
+    justify-content: center;  
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr ;
+    gap: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.txt{
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.curation{
+    margin:auto;
+    width: 100vw;
+    height: auto;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    
+}
+.grid3{
+    /* border:2px solid rgb(255, 0, 0); */
+    margin:  auto;
+    height: 80vh;
+    width:90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    gap : 10px;
+    color: var(--primary-color);
+}
+.collections{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.carousel{
+    background-color: #F5F5F5;
+   width: 100vw;
+   margin: 20vh auto;
+   /* border: 2px solid #ff0000; */
+   box-sizing: border-box;
+   display: flex;
+   overflow-x: auto;
+   
+
+}
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+.group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+    padding-right:1em;
+    animation:spin 10s linear infinite; 
+}
+.card{ 
+    flex: 0 0 5em;
+    height:5em;
+    padding:1em;
+    background-color: var(--primary-color);
+    font-size: 3rem;
+    border-radius: 2em;
+    text-align: center;
+    align-content: center;
+}
+@keyframes spin{
+    from{translate:0;}
+    to{translate:-100%;}
+}
+
+
+.banner{
+    margin: 35vh auto;
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--secondary-color);
+    background-image: url('gojo.png');
+    background-size: cover;
+    background-position: center;
+}
+.footer{
+
+    margin-top: 15vh ;
+    width: 100vw;
+    height: 50vh;
+    background-color: var(--secondary-color);
+}
