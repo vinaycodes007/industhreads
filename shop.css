@@ -50,7 +50,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:var(--secondary-color);
+    background-color:var(--primary-color);
     z-index: 999;
 
 }
