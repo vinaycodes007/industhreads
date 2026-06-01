@@ -3,8 +3,9 @@
 /* font family import links are above */
 
 :root{
-    --primary-color: #FfFFFF;
-    --secondary-color: #000000;
+        --primary-color: #FFFDF6;
+        --secondary-color: #2C1E11;
+        --tertiary-color:#D35400;
 }
 html{
 overflow-y: scroll;
@@ -42,7 +43,8 @@ nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-color);z-index: 1000;
+    background-color: var(--secondary-color);
+    z-index: 1000;
 
 }
 nav ul li{
@@ -59,7 +61,7 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -69,15 +71,16 @@ nav a{
 
 
 
-.button{
+.search{
     height: 100%;
     background-color: transparent;
-    border: none;
-    text-decoration: none;
+    border:none;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* color: var(--secondary-color); */
+    position: absolute;
+    right: 50px;
+    
 }
 
 .logo{
@@ -105,39 +108,49 @@ position: absolute;
 } 
 
 .menu{
+    display: none;
     position: absolute;
     right: 50px;
 } 
 
-/* .navbar{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height:10vh;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}*/
+
 
 .main{
-    margin: 150px auto;
-    width: 90vw;
-    height: 400px;
-    background-color: var(--secondary-color);
-    
-    border-radius: 10px;
+    margin: 15vh auto;
+    width: 95vw;
+    height:80vh;
+    background-color: var(--tertiary-color);
+    background-image: url(gojo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
     color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
 }
+.main>h1{
+    position: absolute;
+    bottom: 20vh;
+}
+.main>button{
+    position: absolute ;
+    bottom:10vh;
+    height: 5vh;
+    width:5vw;
+    border: none;
+    border-radius: 10%;
+    padding: 5px;
 
+}
 .new{
     text-align: center;
-    margin:200px auto;
+    margin:20vh auto;
     height: 50vh;
     width: 100vw;
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--tertairy-color);
     box-sizing: border-box;
     font-size: 30px;
 }
@@ -145,7 +158,7 @@ position: absolute;
    
     /* border:2px solid rgb(255, 0, 0); */
     margin:  auto;
-    height: 400px;
+    height:60vh ;
     width: 100%;
     display: grid;
     justify-content: center;  
@@ -157,16 +170,16 @@ position: absolute;
     
 }
 .item{
-    background-color: var(--secondary-color);
-    border-radius: 10px;
+    background-color: var(--tertiary-color);
+    border-radius: 2px;
 }
 
 .about{
-    margin:50vh auto;
+    margin:10vh auto;
     height:auto;
     width: 100%;
     background-color: var(--primary-color); 
-    DISPLAY: flex;
+    display:  flex;
     justify-content: center; 
 }
 .grid2{
@@ -188,24 +201,31 @@ position: absolute;
 }
 
 .curation{
-    margin:auto;
+    margin:20vh auto;
     width: 100vw;
-    height: auto;
+    height: 80vh;
     background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
+    border: 2px solid black;
+    
+    
+}
+.curation>h1{
+    margin-left: 10vh;
+    
     
 }
 .grid3{
     /* border:2px solid rgb(255, 0, 0); */
-    margin:  auto;
-    height: 80vh;
+    
+    margin:auto;
+    height: 70vh;
     width:90vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows:70vh;
     gap : 10px;
     color: var(--primary-color);
+    border: 2px solid black;                
 }
 .collections{
     background-color: var(--secondary-color);
@@ -213,7 +233,7 @@ position: absolute;
 }
 
 .carousel{
-    background-color: #F5F5F5;
+background-color: #F5F5F5;
    width: 100vw;
    margin: 20vh auto;
    /* border: 2px solid #ff0000; */

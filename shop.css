@@ -3,15 +3,16 @@
 /* font family import links are above */
 
 :root {
-    --primary-color: #FfFFFF;
-    --secondary-color: #000000;
+    --primary-color: #FFFDF6;
+    --secondary-color: #2C1E11;
+    --tertiary-color:#D35400;
 }
 
 html {
     overflow-y: scroll;
 
     /* This activates snapping along the vertical axis */
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y ;
     scroll-padding-top: 15vh;
     /* Adjust this value to match the height of your fixed navbar */
     scroll-behavior: smooth;
@@ -25,6 +26,7 @@ html::-webkit-scrollbar {
 }
 
 body {
+    background-color: var(--primary-color);
     min-height: 100vh;
 }
 
@@ -48,7 +50,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-color);
+    background-color:var(--secondary-color);
     z-index: 999;
 
 }
@@ -133,7 +135,7 @@ nav a {
 
 .selection {
     margin-left: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color:var(--primary-color);
     width: 20vw;
     border: 2px solid rgb(0, 0, 0);
     box-sizing: border-box;
@@ -146,7 +148,7 @@ nav a {
 .pr {
     width: 80vw;
     margin-right: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color:var(--primary-color);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 40vh 40vh 40vh 40vh;
@@ -158,7 +160,7 @@ nav a {
     text-decoration: dotted;
     border: 2px solid #000000;
     border-radius: 10%;
-    background-color: #ffffff;
+    background-color: var(--primary-color);
     color: rgb(130, 5, 208);
 }
 
