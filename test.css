@@ -1,38 +1,35 @@
 /* Parent container positioning context */
-.hover-container {
-  position: relative;
-  display: inline-block;
+/* Layout styling */
+.filter-container {
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
 }
 
-/* Base styles for the popup box */
-.popup-box {
-  /* Positioning rules */
-  position: absolute;
-  top: 100%; /* Places it directly below the trigger element */
-  left: 0;
-  margin-top: 10px;
-  
-  /* Visual styling */
-  width: 250px;
-  padding: 15px;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
+select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.items-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.item {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-
-  /* 1. STARTING ANIMATION STATE (Hidden & Shifted Up) */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px); /* Pushes the popup up by 20px */
-  
-  /* Smooth animation timing config */
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  min-width: 100px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
 }
 
-/* 2. HOVER ANIMATION STATE (Fades in & Slides Down) */
-.hover-menu-container:hover .popup-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0); /* Drops down to its native position */
+/* The critical class used for filtering */
+.item.hidden {
+  display: none;
 }

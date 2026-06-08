@@ -228,7 +228,7 @@ position: absolute;
     width: 95vw;
     height:80vh;
     /* background-color: var(--tertiary-color); */
-    background-image: url(gojo.png);
+    background-image: url('royal serene.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -398,7 +398,7 @@ background-color: #F5F5F5;
     width: 100vw;
     height: 80vh;
     /* background-color: var(--secondary-color); */
-    background-image: url('gojo.png');
+    background-image: url(' royal serene.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -502,3 +502,6 @@ background-color: #F5F5F5;
 
 }
 
+@view-transition{
+    navigation:auto;
+}

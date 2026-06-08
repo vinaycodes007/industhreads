@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>popout</title>
-    <link rel="stylesheet" href="test.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <div class="hover-container">
-  <button class="trigger-btn">Hover over me</button>
   
-  <!-- This is the popup div -->
-  <div class="popup-box">
-    <h3>Popup Title</h3>
-    <p>This box fades and slides down smoothly!</p>
-  </div>
+</body>
+</html>
+<!-- The Filter Dropdown Menu -->
+<div class="filter-container">
+  <label for="categoryFilter">Filter by Category: </label>
+  <select id="categoryFilter">
+    <option value="all">Show All</option>
+    <option value="fruit">Fruits</option>
+    <option value="vegetable">Vegetables</option>
+    <option value="dairy">Dairy</option>
+  </select>
 </div>
 
+<!-- Elements to be Filtered -->
+<div class="items-grid">
+  <div class="item" data-category="fruit">Apple</div>
+  <div class="item" data-category=" ">Carrot</div>
+  <div class="item" data-category="dairy">Milk</div>
+  <div class="item" data-category="fruit">Banana</div>
+  <div class="item" data-category="vegetable">Broccoli</div>
+  <div class="item" data-category="dairy">Cheese</div>
+</div>
 
+<script src="test.js"></script>
 </body>
 </html>
