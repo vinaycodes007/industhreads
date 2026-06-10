@@ -474,7 +474,7 @@ option:hover{
     right: 70px;
 }
 .search-box.active .search-input {
-    width: 120px;
+    width: 80px;
     padding: 10px 15px;
     border-radius: 100px;
     margin-left: 40px;
