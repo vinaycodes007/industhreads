@@ -55,13 +55,37 @@
             <li class="hideonMobile"><a href="support.html">Support</a></li>
             <li class="hideonMobile"><a href="blog.html">Blog</a></li> -->
             <li>    
-                <button class=" search"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26"
+                <div class="search-box">
+        <!-- The input field stays hidden/collapsed initially -->
+        <input type="text" id="searchInput" class="search-input" placeholder="Search for items..." onkeyup="filterItems()">
+        
+        <!-- The clickable search button with a magnifying glass symbol -->
+        <button class="search-btn" onclick="toggleSearch()">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 50 50">
+<path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
+</svg>
+        </button>
+    </div>
+
+    <!-- The searchable list sits below the search box -->
+    <ul id="itemList" class="item-list">
+        <li class="search-item"><a href="shop.html">All Drops</a></li>
+        <li class="search-item"><a href="shop.html">New Arrivals</a></li>
+        <li class="search-item"><a href="shop.html">Bestsellers</a></li>
+        <li class="search-item"><a href="shop.html">Final Sale</a></li>
+        <li class="search-item"><a href="shop.html">Fall collection</a></li>
+        <li class="search-item"><a href="shop.html">The Essence</a></li>
+        <li class="search-item"><a href="shop.html">After Dawn</a></li>
+        <li class="search-item"><a href="shop.html">Summer Essentials</a></li>
+    </ul>
+<!-- old navbar below me -->
+                <!-- <button class=" search" ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26"
                         fill="#000000" viewBox="0 0 50 50">
                         <path
                             d="M 21 3 C 11.622998 3 4 10.623005 4 20 C 4 29.376995 11.622998 37 21 37 C 24.712383 37 28.139151 35.791079 30.9375 33.765625 L 44.085938 46.914062 L 46.914062 44.085938 L 33.886719 31.058594 C 36.443536 28.083 38 24.223631 38 20 C 38 10.623005 30.377002 3 21 3 z M 21 5 C 29.296122 5 36 11.703883 36 20 C 36 28.296117 29.296122 35 21 35 C 12.703878 35 6 28.296117 6 20 C 6 11.703883 12.703878 5 21 5 z">
                         </path>
                     </svg>
-                </button>
+                </button> -->
             </li>
             <li id="menu" class="menu" onclick=" showSidebar();hidesidebar" ()>
                 <a href="">
@@ -154,6 +178,7 @@
             sidebar.classList.toggle('show');
         });
     </script>
+    <script src="home.js"></script>
 </body>
 
 </html>

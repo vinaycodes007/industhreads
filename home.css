@@ -220,9 +220,93 @@ position: absolute;
     position: absolute;
     right: 80px;
 } 
+/* new search bar */
+
+/* Container holding the input and button */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 50px;
+    padding: 5px;
+    border-radius: 25px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+/* Input field is collapsed (width 0) by default */
+.search-input {
+    width: 0px;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    font-size: 16px;
+    transition: width 0.4s ease, padding 0.4s ease;
+}
+
+/* The clickable icon button styling */
+.search-btn {
+    
+    border-radius: 50%;
+    background-color:transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
 
 
 
+/* Active state: JavaScript applies this class to open the bar */
+.search-box.active .search-input {
+    width: 240px;
+    padding: 0 15px;
+}
+
+/* Hide the entire list by default until the search bar is active */
+.item-list {
+    list-style-type: none;
+    padding: 0;
+    /* margin-top: 20px; */
+    width: 290px;
+    display: none; 
+}
+
+/* Show the list only when the search container has the active class */
+.search-box.active ~ .item-list {
+    margin-top: 10vh;
+    display: block;
+}
+
+/* List item decoration */
+.search-item {
+    background-color: #ffffff;
+    
+    /* margin-bottom: 8px; */
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* new seatch bar */
 .main{
     margin: 15vh auto;
     width: 95vw;

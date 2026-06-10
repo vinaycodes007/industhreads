@@ -220,8 +220,156 @@ position: absolute;
     position: absolute;
     right: 50px;
 }
+/* Container holding the input and button */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 50px;
+    padding: 5px;
+    border-radius: 25px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
 
-.grid {
+/* Input field is collapsed (width 0) by default */
+.search-input {
+    width: 0px;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    font-size: 16px;
+    transition: width 0.4s ease, padding 0.4s ease;
+}
+
+/* The clickable icon button styling */
+.search-btn {
+    
+    border-radius: 50%;
+    background-color:transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+
+
+/* Active state: JavaScript applies this class to open the bar */
+.search-box.active .search-input {
+    width: 240px;
+    padding: 0 15px;
+}
+
+/* Hide the entire list by default until the search bar is active */
+.item-list {
+    list-style-type: none;
+    padding: 0;
+    /* margin-top: 20px; */
+    width: 290px;
+    display: none; 
+}
+
+/* Show the list only when the search container has the active class */
+.search-box.active ~ .item-list {
+    margin-top: 10vh;
+    display: block;
+}
+
+/* List item decoration */
+.search-item {
+    background-color: #ffffff;
+    
+    /* margin-bottom: 8px; */
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #333;
+}
+.grid-section{
+    margin-top:10vh;
+}
+/* new product grid */
+.pr {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+/* 2. Individual Card Base Styling */
+.filter-item {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 3. The New Background Image Container */
+.product-img-bg {
+    width: 100%;
+    height: 180px; /* Adjust height based on your layout preference */
+    border-radius: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Keeps image sharp and perfectly proportioned */
+    background-color: #f7f7f7; /* Soft placeholder fallback color */
+    transition: transform 0.3s ease;
+}
+
+/* 4. Text Label Styling */
+.product-name {
+    margin: 5px 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #222;
+}
+
+/* 5. Hover Effects (Cards lift up, images scale slightly) */
+.filter-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.filter-item:hover .product-img-bg {
+    transform: scale(1.02);
+}
+
+/* ==========================================
+   6. LINK YOUR IMAGE FILES / PATHS HERE
+   ========================================== */
+.img-apple      { background-image: url('akela\ londa.jpeg'); }
+.img-banana     { background-image: url('indus\ threads\ logo\ 2.png'); }
+.img-kela       { background-image: url('royal\ serene.jpeg'); }
+.img-papita     { background-image: url('jaipur.jpeg'); }
+.img-seb        { background-image: url('sitar\ .jpeg'); }
+.img-papaya     { background-image: url('soul\ front.png'); }
+.img-watermelon { background-image: url('varanasi.jpeg'); }
+.img-tarbuj     { background-image: url('images/tarbuj.jpg'); }
+.img-aam        { background-image: url('images/aam.jpg'); }
+.img-mango      { background-image: url('images/mango.jpg'); }
+.img-cheeku     { background-image: url('images/cheeku.jpg'); }
+.img-lichi      { background-image: url('images/lichi.jpg'); }
+
+
+
+
+/* new product grid */
+
+/* .grid {
     margin-top: 20vh;
     height: auto;
     width: 100vw;
@@ -230,17 +378,7 @@ position: absolute;
     gap: 20px;
 }
 
-.selection {
-    margin-left: 20px;
-    background-color:var(--primary-color);
-    width: 20vw;
-    border: 2px solid rgb(0, 0, 0);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 
-}
 
 .pr {
     width: 80vw;
@@ -251,8 +389,22 @@ position: absolute;
     grid-template-rows: 40vh 40vh 40vh 40vh;
     gap: 10px;
 }
-
+.filter-container{
+    text-align: center;
+    width:20vw ;
+    height: auto;
+    position: relative;
+    top: 0;  
+    left:0px;
+        background-color:var(--primary-color);
+        border: 2px solid rgb(0, 0, 0);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+}
 .filter-item {
+
     text-align: center;
     text-decoration: dotted;
     border: 2px solid #000000;
@@ -263,7 +415,26 @@ position: absolute;
 .filter-item.hidden {
   display: none;
 }
-
+#category-filter {
+    
+   
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+  
+    box-sizing: border-box;
+    outline: none;
+    color: red;
+}
+option{
+    color: rgb(255, 4, 4);
+    text-align: center;
+}
+option:hover{
+    color: rgb(255, 0, 0);
+    text-align: center;
+    background-color: saddlebrown;
+} */
 /* #search-bar {
     width: 80%;
     height: 3%;

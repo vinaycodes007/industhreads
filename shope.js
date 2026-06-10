@@ -1,21 +1,35 @@
-// function filterSearch() {
-//     // 1. Get the text entered by the user
-//     const searchInput = document.getElementById('search-bar').value.toLowerCase();
-    
-//     // 2. Grab all the list items
-//     const items = document.querySelectorAll('.searchable-item');
+// Toggles the visibility of the search input
+function toggleSearch() {
+    const searchBox = document.querySelector('.search-box');
+    const searchInput = document.getElementById('searchInput');
 
-//     // 3. Loop through each item and check if it matches the query
-//     items.forEach(item => {
-//         const textValue = item.textContent.toLowerCase();
-        
-//         if (textValue.includes(searchInput)) {
-//             item.style.display = ""; // Show matching item
-//         } else {
-//             item.style.display = "none"; // Hide non-matching item
-//         }
-//     });
-// }
+    // Add or remove the 'active' class to animate open/close
+    searchBox.classList.toggle('active');
+
+    if (searchBox.classList.contains('active')) {
+        // Automatically put the typing cursor inside the input when it opens
+        searchInput.focus();
+    } else {
+        // Clear text and show all items again when closing the search bar
+        searchInput.value = '';
+        filtersearch();
+    }
+}
+
+// Keep your existing filtering logic intact below:
+function filtersearch() {
+    const searchInputValue = document.getElementById('searchInput').value.toLowerCase();
+    const listItems = document.querySelectorAll('.search-item');
+
+    listItems.forEach(item => {
+        const textValue = item.textContent || item.innerText;
+        if (textValue.toLowerCase().includes(searchInputValue)) {
+            item.style.display = "";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
 // Get references to elements
 const filterDropdown = document.getElementById('categoryFilter');
 const filterItems = document.querySelectorAll('.filter-item');
@@ -33,3 +47,7 @@ filterDropdown.addEventListener('change', function() {
     }
   });
 });
+
+
+
+

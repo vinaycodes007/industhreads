@@ -1,35 +1,71 @@
-/* Parent container positioning context */
-/* Layout styling */
-.filter-container {
-  margin-bottom: 20px;
-  font-family: Arial, sans-serif;
+/* 1. Enhanced Product Grid Setup */
+.pr {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
 }
 
-select {
-  padding: 8px 12px;
-  font-size: 16px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+/* 2. Individual Card Base Styling */
+.filter-item {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.items-grid {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+/* 3. The New Background Image Container */
+.product-img-bg {
+    width: 100%;
+    height: 180px; /* Adjust height based on your layout preference */
+    border-radius: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Keeps image sharp and perfectly proportioned */
+    background-color: #f7f7f7; /* Soft placeholder fallback color */
+    transition: transform 0.3s ease;
 }
 
-.item {
-  padding: 20px;
-  background-color: #f0f0f0;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  min-width: 100px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  transition: all 0.3s ease;
+/* 4. Text Label Styling */
+.product-name {
+    margin: 5px 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #222;
 }
 
-/* The critical class used for filtering */
-.item.hidden {
-  display: none;
+/* 5. Hover Effects (Cards lift up, images scale slightly) */
+.filter-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
+
+.filter-item:hover .product-img-bg {
+    transform: scale(1.02);
+}
+
+/* ==========================================
+   6. LINK YOUR IMAGE FILES / PATHS HERE
+   ========================================== */
+.img-apple      { background-image: url('akela\ londa.jpeg'); }
+.img-banana     { background-image: url('indus\ threads\ logo\ 2.png'); }
+.img-kela       { background-image: url('royal\ serene.jpeg'); }
+.img-papita     { background-image: url('jaipur.jpeg'); }
+.img-seb        { background-image: url('sitar\ .jpeg'); }
+.img-papaya     { background-image: url('soul\ front.png'); }
+.img-watermelon { background-image: url('varanasi.jpeg'); }
+.img-tarbuj     { background-image: url('images/tarbuj.jpg'); }
+.img-aam        { background-image: url('images/aam.jpg'); }
+.img-mango      { background-image: url('images/mango.jpg'); }
+.img-cheeku     { background-image: url('images/cheeku.jpg'); }
+.img-lichi      { background-image: url('images/lichi.jpg'); }
+
