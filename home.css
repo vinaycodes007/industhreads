@@ -264,7 +264,7 @@ position: absolute;
 /* Active state: JavaScript applies this class to open the bar */
 .search-box.active .search-input {
     width: 240px;
-    
+    border-radius: 100px;
     padding: 10px 15px;
     background-color: black;
     color: white;
