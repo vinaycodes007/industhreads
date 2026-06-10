@@ -262,7 +262,11 @@ position: absolute;
 /* Active state: JavaScript applies this class to open the bar */
 .search-box.active .search-input {
     width: 240px;
-    padding: 0 15px;
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+   
 }
 
 /* Hide the entire list by default until the search bar is active */
@@ -270,7 +274,7 @@ position: absolute;
     list-style-type: none;
     padding: 0;
     /* margin-top: 20px; */
-    width: 290px;
+    width: 300px;
     display: none; 
 }
 
@@ -465,9 +469,15 @@ option:hover{
     position: absolute;
     left: 20px;
 }
-.search{
+.search-btn{
     position: absolute;
     right: 70px;
+}
+.search-box.active .search-input {
+    width: 120px;
+    padding: 10px 15px;
+    border-radius: 100px;
+    margin-left: 40px;
 }
 .menu{
     display: flex;
