@@ -300,7 +300,7 @@ position: absolute;
 /* new product grid */
 .pr {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
     gap: 25px;
     padding: 20px 0;
 }
@@ -324,7 +324,7 @@ position: absolute;
 /* 3. The New Background Image Container */
 .product-img-bg {
     width: 100%;
-    height: 180px; /* Adjust height based on your layout preference */
+    height: 40vh; /* Adjust height based on your layout preference */
     border-radius: 12px;
     background-position: center;
     background-repeat: no-repeat;
@@ -373,94 +373,109 @@ position: absolute;
 
 /* new product grid */
 
-/* .grid {
-    margin-top: 20vh;
-    height: auto;
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.site-footer {
+    height: 50vh;
     width: 100vw;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 4rem 1.5rem 4rem;
+}
+
+.footer-content {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Brand Section Styling */
+.footer-brand {
+    flex: 1;
+}
+
+.footer-brand h2 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    color: #f1c40f; /* Subtle gold accent for Indian heritage theme */
+}
+
+.footer-brand p {
+    color: #999999;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 300px;
+}
+
+/* Links Columns Grid */
+.footer-links-container {
+    display: flex;
+    gap: 4rem;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.footer-column a {
+    color: #999999;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+    transition: color 0.3s ease;
+}
+
+/* Link Hover Actions */
+.footer-column a:hover {
+    color: #f1c40f;
+}
+
+.instagram-link i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Bottom Bar Separation */
+.footer-bottom {
+    border-top: 1px solid #222222;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #666666;
+}
+
+/* Media Query to prevent content overflow in tight 50vh constraint */
+@media (max-height: 600px) {
+    .site-footer {
+        padding: 1.5rem 2rem 1rem 2rem;
+    }
+    .footer-brand h2 { font-size: 1.4rem; }
+    .footer-column h3 { margin-bottom: 0.5rem; }
+    .footer-column a { margin-bottom: 0.4rem; }
 }
 
 
 
-.pr {
-    width: 80vw;
-    margin-right: 20px;
-    background-color:var(--primary-color);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 40vh 40vh 40vh 40vh;
-    gap: 10px;
-}
-.filter-container{
-    text-align: center;
-    width:20vw ;
-    height: auto;
-    position: relative;
-    top: 0;  
-    left:0px;
-        background-color:var(--primary-color);
-        border: 2px solid rgb(0, 0, 0);
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-}
-.filter-item {
-
-    text-align: center;
-    text-decoration: dotted;
-    border: 2px solid #000000;
-    border-radius: 10%;
-    background-color: var(--primary-color);
-    color: rgb(130, 5, 208);
-}
-.filter-item.hidden {
-  display: none;
-}
-#category-filter {
-    
-   
-    font-size: 16px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-  
-    box-sizing: border-box;
-    outline: none;
-    color: red;
-}
-option{
-    color: rgb(255, 4, 4);
-    text-align: center;
-}
-option:hover{
-    color: rgb(255, 0, 0);
-    text-align: center;
-    background-color: saddlebrown;
-} */
-/* #search-bar {
-    width: 80%;
-    height: 3%;
-    padding: 4px;
-    font-size: 16px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    box-sizing: border-box;
-    outline: none;
-}
-
-#search-bar:focus {
-    border-color: #000000;
-} */
-
-.footer {
-
-    margin-top: 150px;
-    width: 100%;
-    height: 50vh;
-    background-color: var(--secondary-color);
-}
+/* new footer */
 @media(max-width: 768px){
     .hideonMobile{
     display: none;
