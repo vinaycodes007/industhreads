@@ -313,6 +313,7 @@ position: absolute;
 
 /* new seatch bar */
 .main{
+    position: relative;
     margin: 15vh auto;
     width: 95vw;
     height:80vh;
@@ -326,6 +327,17 @@ position: absolute;
     display: flex;
     justify-content: center;
     align-items: last baseline;
+}
+.main::after{
+      content: "";
+  position: absolute;
+  inset: 0; /* Aligns to all edges */
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0); /* Invisible initially */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+  pointer-events: none; /* Allows clicks to pass through to underlying links */
+}
+.main:hover::after {
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Darkens the image on hover */
 }
 .main>h1{
     position: absolute;
@@ -417,8 +429,8 @@ position: absolute;
     margin:20vh auto;
     width: 100vw;
     height: auto;
-    background-color: var(--primary-color);
-    border: 2px solid black;
+    /* background-color: var(--primary-color); */
+    /* border: 2px solid black; */
     
     
 }
@@ -437,14 +449,59 @@ position: absolute;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows:70vh;
     gap : 10px;
-    color: var(--secondary-color);
-    border: 2px solid black;                
+    /* color: var(--secondary-color); */
+    /* border: 2px solid black;                 */
 }
 .collections{
-    background-color: var(--tertiary-color);
+    /* background-color: var(--tertiary-color); */
+    position: relative;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--primary-color);
+}
+.collections::after{
+    
+   content: "";
+  position: absolute;
+  inset: 0;
+  /* Transparent center fading out to a dark edge */
+  background: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);
+  opacity: 0; /* Fully hidden by default */
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+border-radius: 10px;
 }
 
+.collections:hover::after {
+    opacity: 1;
+}
+
+.collections>h1{
+    
+    margin-bottom: 10vh;
+    
+}
+.fall{
+    background-image: url('jaipur.jpeg');
+    background-size: cover;
+    background-position:top;
+       background-repeat: no-repeat;
+}
+.essentials{
+    background-image: url('varanasi\ front.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.movie{
+    background-image: url('gojo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .carousel{
 background-color: #F5F5F5;
    width: 100vw;
@@ -624,7 +681,7 @@ background-color: #F5F5F5;
     right: 70px;
 }
 .search-box.active .search-input {
-    width: 80px;
+    width: 30vw;
     padding: 10px 15px;
     border-radius: 100px;
     margin-left: 40px;
@@ -697,6 +754,7 @@ background-color: #F5F5F5;
     
     
 }
+
 .grid3{
     /* border:2px solid rgb(255, 0, 0); */
     
